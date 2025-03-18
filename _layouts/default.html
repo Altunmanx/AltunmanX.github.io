@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% seo %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <style>
+      /* Basit stil örneği - dilediğiniz gibi özelleştirin */
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      header, footer {
+        text-align: center;
+        margin: 1em 0;
+      }
+      nav a {
+        margin: 0 5px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      {% include header.html %}
+      <nav>
+        <a href="{{ '/' | relative_url }}">Ana Sayfa</a>
+        <!-- Menüye başka sayfa linkleri ekleyebilirsiniz -->
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p>&copy; {{ site.time | date: '%Y' }} - {{ site.author }}</p>
+    </footer>
+  </body>
+</html>
