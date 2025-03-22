@@ -84,3 +84,18 @@ footer {
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 0.9rem;
 }
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url("https://raw.githubusercontent.com/kodjunkie/star-bg/main/stars.png") repeat top center;
+  z-index: -2;
+  animation: stars 100s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes stars {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 10000px; }
+}
