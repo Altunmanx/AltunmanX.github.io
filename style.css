@@ -2,9 +2,20 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+  background: url('space.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #ffffff;
   line-height: 1.6;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* saydam karanlık filtre */
+  z-index: -1;
 }
 
 /* Başlık */
